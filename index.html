@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#f7b6c8" />
+  <meta name="theme-color" content="#c9b8a6" />
   <title>Pay · DK Cookies · Double Kiss</title>
   <style>
-    :root {
-      --cream: #fff8f3;
-      --blush: #f7b6c8;
-      --rose: #e87a9a;
-      --rose-deep: #c94f74;
-      --cocoa: #5c3a2e;
-      --cocoa-soft: #8b5e4b;
-      --mint: #b8e0d2;
-      --gold: #f2c97d;
+:root {
+      --cream: #f7f1e8;
+      --blush: #d4b8a8;
+      --rose: #a89080;
+      --rose-deep: #5c5046;
+      --cocoa: #4a3f35;
+      --cocoa-soft: #7a6b5d;
+      --mint: #e4d9cb;
+      --gold: #d4b896;
+      --sand: #c9b8a6;
       --card: #ffffff;
-      --shadow: 0 10px 28px rgba(92, 58, 46, 0.12);
+      --shadow: 0 10px 28px rgba(74, 63, 53, 0.10);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { min-height: 100%; }
     body {
       font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
       background:
-        radial-gradient(ellipse at 20% 0%, #ffe4ec 0%, transparent 50%),
-        radial-gradient(ellipse at 90% 10%, #ffe9c8 0%, transparent 45%),
-        radial-gradient(ellipse at 50% 100%, #d9f3ea 0%, transparent 50%),
+        radial-gradient(ellipse at 20% 0%, #efe6da 0%, transparent 50%),
+        radial-gradient(ellipse at 90% 10%, #e8dfd2 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 100%, #ebe4d8 0%, transparent 50%),
         var(--cream);
       color: var(--cocoa);
       padding: 28px 18px 48px;
@@ -99,9 +100,9 @@
       -webkit-tap-highlight-color: transparent;
     }
     .pay-btn:active { transform: scale(0.98); }
-    .pay-btn.venmo { border-color: #8fd4ff; background: linear-gradient(135deg, #ffffff, #eef8ff); }
-    .pay-btn.cashapp { border-color: #9de8b8; background: linear-gradient(135deg, #ffffff, #eefaf2); }
-    .pay-btn.apple { border-color: #f7b6c8; background: linear-gradient(135deg, #ffffff, #fff0f4); }
+    .pay-btn.venmo { border-color: #c9b8a6; background: linear-gradient(135deg, #ffffff, #faf6f0); }
+    .pay-btn.cashapp { border-color: #c9b8a6; background: linear-gradient(135deg, #ffffff, #faf6f0); }
+    .pay-btn.apple { border-color: #c9b8a6; background: linear-gradient(135deg, #ffffff, #faf6f0); }
     .icon {
       width: 48px;
       height: 48px;
@@ -139,7 +140,7 @@
       border-radius: 22px;
       padding: 18px;
       box-shadow: var(--shadow);
-      border: 2.5px solid #f7b6c8;
+      border: 2.5px solid #c9b8a6;
     }
     .apple-card .hint {
       font-size: 0.92rem;
@@ -156,7 +157,7 @@
     }
     .phone-display {
       flex: 1;
-      background: #fff8f3;
+      background: #f7f1e8;
       border: 2px dashed var(--blush);
       border-radius: 14px;
       padding: 12px 14px;
@@ -209,21 +210,21 @@
     <header class="brand">
       <div class="logo-row">
         <svg class="cookie" viewBox="0 0 64 64" aria-hidden="true">
-          <circle cx="32" cy="32" r="28" fill="#e8b86d"/>
-          <circle cx="32" cy="32" r="24" fill="#f2c97d"/>
-          <circle cx="22" cy="24" r="3.2" fill="#5c3a2e"/>
-          <circle cx="38" cy="22" r="2.6" fill="#5c3a2e"/>
-          <circle cx="28" cy="36" r="2.8" fill="#5c3a2e"/>
-          <circle cx="42" cy="34" r="3" fill="#5c3a2e"/>
-          <circle cx="34" cy="44" r="2.4" fill="#5c3a2e"/>
+          <circle cx="32" cy="32" r="28" fill="#c4a574"/>
+          <circle cx="32" cy="32" r="24" fill="#d4b896"/>
+          <circle cx="22" cy="24" r="3.2" fill="#5c5046"/>
+          <circle cx="38" cy="22" r="2.6" fill="#5c5046"/>
+          <circle cx="28" cy="36" r="2.8" fill="#5c5046"/>
+          <circle cx="42" cy="34" r="3" fill="#5c5046"/>
+          <circle cx="34" cy="44" r="2.4" fill="#5c5046"/>
         </svg>
         <div>
           <h1>Double Kiss</h1>
           <div class="tagline">DK Cookies</div>
         </div>
         <svg class="cookie" viewBox="0 0 64 64" aria-hidden="true">
-          <path d="M18 30 C18 18, 32 14, 32 26 C32 14, 46 18, 46 30 C46 42, 32 50, 32 50 C32 50, 18 42, 18 30 Z" fill="#e87a9a"/>
-          <path d="M22 30 C22 22, 32 20, 32 28 C32 20, 42 22, 42 30 C42 38, 32 44, 32 44 C32 44, 22 38, 22 30 Z" fill="#f7b6c8"/>
+          <path d="M18 30 C18 18, 32 14, 32 26 C32 14, 46 18, 46 30 C46 42, 32 50, 32 50 C32 50, 18 42, 18 30 Z" fill="#c4a090"/>
+          <path d="M22 30 C22 22, 32 20, 32 28 C32 20, 42 22, 42 30 C42 38, 32 44, 32 44 C32 44, 22 38, 22 30 Z" fill="#d4b8a8"/>
         </svg>
       </div>
       <div class="hearts">♡ · ♡ · ♡</div>
