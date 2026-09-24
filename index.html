@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7b6c8" />
+  <title>Pay · DK Cookies · Double Kiss</title>
+  <style>
+    :root {
+      --cream: #fff8f3;
+      --blush: #f7b6c8;
+      --rose: #e87a9a;
+      --rose-deep: #c94f74;
+      --cocoa: #5c3a2e;
+      --cocoa-soft: #8b5e4b;
+      --mint: #b8e0d2;
+      --gold: #f2c97d;
+      --card: #ffffff;
+      --shadow: 0 10px 28px rgba(92, 58, 46, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { min-height: 100%; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      background:
+        radial-gradient(ellipse at 20% 0%, #ffe4ec 0%, transparent 50%),
+        radial-gradient(ellipse at 90% 10%, #ffe9c8 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 100%, #d9f3ea 0%, transparent 50%),
+        var(--cream);
+      color: var(--cocoa);
+      padding: 28px 18px 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .wrap {
+      width: 100%;
+      max-width: 420px;
+    }
+    .brand {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .cookie {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+    }
+    h1 {
+      font-size: 1.85rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--rose-deep);
+      line-height: 1.15;
+    }
+    .tagline {
+      font-size: 1.05rem;
+      color: var(--cocoa-soft);
+      font-weight: 600;
+    }
+    .hearts {
+      color: var(--rose);
+      letter-spacing: 0.15em;
+      font-size: 1.1rem;
+      margin-top: 4px;
+    }
+    .intro {
+      text-align: center;
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+      color: var(--cocoa);
+      font-weight: 500;
+    }
+    .pay-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .pay-btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-height: 72px;
+      padding: 16px 18px;
+      border-radius: 22px;
+      text-decoration: none;
+      color: var(--cocoa);
+      background: var(--card);
+      box-shadow: var(--shadow);
+      border: 2.5px solid transparent;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .pay-btn:active { transform: scale(0.98); }
+    .pay-btn.venmo { border-color: #8fd4ff; background: linear-gradient(135deg, #ffffff, #eef8ff); }
+    .pay-btn.cashapp { border-color: #9de8b8; background: linear-gradient(135deg, #ffffff, #eefaf2); }
+    .pay-btn.apple { border-color: #f7b6c8; background: linear-gradient(135deg, #ffffff, #fff0f4); }
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-size: 1.55rem;
+      flex-shrink: 0;
+    }
+    .venmo .icon { background: #008cff; color: #fff; font-weight: 800; font-size: 1.1rem; }
+    .cashapp .icon { background: #00c244; color: #fff; font-weight: 800; font-size: 1.35rem; }
+    .apple .icon { background: #1d1d1f; color: #fff; font-size: 1.4rem; }
+    .btn-text { flex: 1; min-width: 0; }
+    .btn-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .btn-sub {
+      font-size: 0.95rem;
+      color: var(--cocoa-soft);
+      font-weight: 600;
+      margin-top: 2px;
+      word-break: break-word;
+    }
+    .chevron {
+      font-size: 1.4rem;
+      color: var(--rose);
+      font-weight: 700;
+      opacity: 0.7;
+    }
+    .apple-card {
+      margin-top: 4px;
+      background: var(--card);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      border: 2.5px solid #f7b6c8;
+    }
+    .apple-card .hint {
+      font-size: 0.92rem;
+      color: var(--cocoa-soft);
+      margin-top: 10px;
+      line-height: 1.35;
+      text-align: center;
+    }
+    .copy-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+      align-items: stretch;
+    }
+    .phone-display {
+      flex: 1;
+      background: #fff8f3;
+      border: 2px dashed var(--blush);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: 1.25rem;
+      font-weight: 800;
+      text-align: center;
+      color: var(--cocoa);
+      letter-spacing: 0.02em;
+    }
+    .copy-btn {
+      border: none;
+      border-radius: 14px;
+      background: var(--rose);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 0 16px;
+      cursor: pointer;
+      min-width: 88px;
+    }
+    .copy-btn:active { background: var(--rose-deep); }
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 28px;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--cocoa);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 20;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--cocoa-soft);
+      font-weight: 600;
+    }
+    footer .kiss { color: var(--rose); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="brand">
+      <div class="logo-row">
+        <svg class="cookie" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="28" fill="#e8b86d"/>
+          <circle cx="32" cy="32" r="24" fill="#f2c97d"/>
+          <circle cx="22" cy="24" r="3.2" fill="#5c3a2e"/>
+          <circle cx="38" cy="22" r="2.6" fill="#5c3a2e"/>
+          <circle cx="28" cy="36" r="2.8" fill="#5c3a2e"/>
+          <circle cx="42" cy="34" r="3" fill="#5c3a2e"/>
+          <circle cx="34" cy="44" r="2.4" fill="#5c3a2e"/>
+        </svg>
+        <div>
+          <h1>Double Kiss</h1>
+          <div class="tagline">DK Cookies</div>
+        </div>
+        <svg class="cookie" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M18 30 C18 18, 32 14, 32 26 C32 14, 46 18, 46 30 C46 42, 32 50, 32 50 C32 50, 18 42, 18 30 Z" fill="#e87a9a"/>
+          <path d="M22 30 C22 22, 32 20, 32 28 C32 20, 42 22, 42 30 C42 38, 32 44, 32 44 C32 44, 22 38, 22 30 Z" fill="#f7b6c8"/>
+        </svg>
+      </div>
+      <div class="hearts">♡ · ♡ · ♡</div>
+    </header>
+
+    <p class="intro">Thanks for supporting our little bakery! Pick how you’d like to pay:</p>
+
+    <div class="pay-list">
+      <a class="pay-btn venmo" href="https://venmo.com/u/dkcookies" rel="noopener">
+        <div class="icon">V</div>
+        <div class="btn-text">
+          <div class="btn-title">Venmo</div>
+          <div class="btn-sub">@dkcookies</div>
+        </div>
+        <span class="chevron" aria-hidden="true">›</span>
+      </a>
+
+      <a class="pay-btn cashapp" href="https://cash.app/$dkcookiess" rel="noopener">
+        <div class="icon">$</div>
+        <div class="btn-text">
+          <div class="btn-title">Cash App</div>
+          <div class="btn-sub">$dkcookiess</div>
+        </div>
+        <span class="chevron" aria-hidden="true">›</span>
+      </a>
+
+      <a class="pay-btn apple" href="sms:+14256281117" rel="noopener">
+        <div class="icon"></div>
+        <div class="btn-text">
+          <div class="btn-title">Apple Pay / Apple Cash</div>
+          <div class="btn-sub">Text 425-628-1117</div>
+        </div>
+        <span class="chevron" aria-hidden="true">›</span>
+      </a>
+    </div>
+
+    <div class="apple-card">
+      <div class="btn-title" style="text-align:center;font-size:1.05rem;">Or send Apple Cash to:</div>
+      <div class="copy-row">
+        <div class="phone-display" id="phone">425-628-1117</div>
+        <button type="button" class="copy-btn" id="copyBtn" aria-label="Copy phone number">Copy</button>
+      </div>
+      <p class="hint">Send with Apple Cash in Messages</p>
+    </div>
+
+    <footer>
+      <span class="kiss">💕</span> Made with love · Double Kiss Cookies <span class="kiss">💕</span>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status">Copied!</div>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('copyBtn');
+      var phone = '425-628-1117';
+      var toast = document.getElementById('toast');
+      function showToast() {
+        toast.classList.add('show');
+        setTimeout(function () { toast.classList.remove('show'); }, 1600);
+      }
+      btn.addEventListener('click', function () {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(phone).then(showToast).catch(fallback);
+        } else {
+          fallback();
+        }
+      });
+      function fallback() {
+        var ta = document.createElement('textarea');
+        ta.value = phone;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); showToast(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    })();
+  </script>
+</body>
+</html>
